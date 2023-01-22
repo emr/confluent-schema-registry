@@ -199,7 +199,7 @@ class SchemaRegistry {
                 return readerSchema.fromBuffer(payload, readerSchema.createResolver(writerSchema));
             }
         }
-        return writerSchema.fromBuffer(payload);
+        return writerSchema.fromBuffer(payload, undefined, true);
     }
     async getRegistryId(subject, version) {
         const response = await this.api.Subject.version({ subject, version });

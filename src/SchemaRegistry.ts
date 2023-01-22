@@ -327,7 +327,7 @@ export default class SchemaRegistry {
       }
     }
 
-    return writerSchema.fromBuffer(payload)
+    return writerSchema.fromBuffer(payload, undefined, true)
   }
 
   public async getRegistryId(subject: string, version: number | string): Promise<number> {
